@@ -1,0 +1,35 @@
+.logo {
+    width: 284.4px;
+    height: 85.2px;
+    flex-shrink: 0;
+    left: 100px;
+    top: 50px;
+    position: relative;
+}
+
+nav {
+    top: 200px;
+    word-spacing: 8px;
+    font-family: Inter;
+    font-weight: 400;
+}
+
+
+
+.navlinks {
+    position: relative;
+    top: 75px;
+    left: 100px;
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    background-image: url(images/indexbackround.png) lightgray 50% / cover no-repeat;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid red;
+    flex-shrink: 0;
+}
