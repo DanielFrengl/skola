@@ -23,6 +23,6 @@ else {
 
 $conn->close();
 
-echo "ses kokot";
-echo "ses kokot";
+echo "<br>ses kokot";
+echo "<br>ses kokot";
 ?>
