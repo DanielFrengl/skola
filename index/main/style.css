@@ -1,0 +1,107 @@
+.logoheader {
+margin-left: 100px;
+    margin-top: 80px;
+    padding-bottom: 20px;
+}
+
+.logoheader img {
+    width: 284.4px;
+    height: 85.2px;
+}
+
+
+.navlinksa {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+body {
+    background-image: url(../images/indexbackround.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    backdrop-filter: brightness(50%);
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    font-family: Inter;
+    font-weight: 400;
+    align-content: flex-start;
+    margin-left: 80px;
+    text-decoration: none;
+
+}
+
+
+
+
+li {
+    padding-right: 20px;
+    list-style-type:none
+}
+
+article {
+    margin-top: 200px;
+    margin-left: 100px;
+    border: 1px solid #ffffff;
+    width: 637.6px;
+    height: 500px;
+    flex-shrink: 0;
+
+}
+
+article p {
+    color: #FFF;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+article h1 {
+    color: #FFF;
+    font-family: "Kantumruy Pro";
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0  ;
+}
+
+
+
+.buttonrezervace {
+    background: white;
+    width: 209px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+.buttonrezervace:hover {
+    background: black;
+    color: white;
+}
+
+
+
+main {
+    width: 100%;
+    height: auto;
+    border: 1px solid red;
+    flex-shrink: 0;
+}
