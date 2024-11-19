@@ -19,7 +19,7 @@
  * Můžete ho upravovat a používat jak chcete, musíte však zmínit
  * odkaz na http://www.itnetwork.cz
  */
-
+require_once __DIR__ . '/Kontroler.php';
 /**
  * Kontroler pro zpracování chybové stránky
  */

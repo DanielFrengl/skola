@@ -46,3 +46,7 @@ $smerovac->zpracuj(array($_SERVER['REQUEST_URI']));
 
 // Vyrenderování šablony
 $smerovac->vypisPohled();
+
+Db::pripoj("localhost", "root", "", "mydb");
+
+?>

@@ -19,11 +19,13 @@
  * Můžete ho upravovat a používat jak chcete, musíte však zmínit
  * odkaz na http://www.itnetwork.cz
  */
-
 /**
  * Router je speciální typ controlleru, který podle URL adresy zavolá
  * správný controller a jím vytvořený pohled vloží do šablony stránky
  */
+
+require_once __DIR__ . '/Kontroler.php';
+
 class SmerovacKontroler extends Kontroler
 {
 	/**
