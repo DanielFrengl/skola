@@ -1,21 +1,5 @@
-.logoheader {
-margin-left: 100px;
-    margin-top: 80px;
-    padding-bottom: 20px;
-}
 
-.logoheader img {
-    width: 284.4px;
-    height: 85.2px;
-}
 
-.rectanglebackround {
-}
-
-.navlinksa {
-    color: #ffffff;
-    text-decoration: none;
-}
 
 body {
 }
@@ -41,7 +25,7 @@ li {
 }
 
 article {
-    margin-top: 200px;
+    margin-top: 180px;
     margin-left: 100px;
     width: 637.6px;
     height: 500px;
@@ -62,7 +46,6 @@ article p {
 
 article h1 {
     color: #FFF;
-    font-family: "Kantumruy Pro";
     font-size: 100px;
     font-style: normal;
     font-weight: 700;
@@ -80,7 +63,7 @@ article h1 {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #000;
+    color: black;
     font-family: Raleway;
     font-size: 20px;
     font-style: normal;
@@ -100,7 +83,6 @@ article h1 {
 main {
     width: 100%;
     height: auto;
-    border: 1px solid red;
     flex-shrink: 0;
     background-image: url(images/indexbackround.png);
     background-repeat: no-repeat;
@@ -122,3 +104,6 @@ main {
     display: flex;
     flex-direction: column;
 }
+
+
+
