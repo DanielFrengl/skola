@@ -22,7 +22,7 @@
 
 // Nastavení interního kódování pro funkce pro práci s řetězci
 mb_internal_encoding("UTF-8");
-
+require_once __DIR__ . '/vendor/autoload.php';
 /**
  * Callback pro automatické načítání tříd controllerů a modelů
  * @param string $trida Název třídy k načtení
@@ -40,6 +40,8 @@ function autoloadFunkce(string $trida): void
 // Registrace callbacku (Pod starým PHP 5.2 je nutné nahradit fcí __autoload())
 spl_autoload_register("autoloadFunkce");
 
+Db::pripoj("localhost", "root", "", "mydb");
+
 // Vytvoření routeru a zpracování parametrů od uživatele z URL
 $smerovac = new SmerovacKontroler();
 $smerovac->zpracuj(array($_SERVER['REQUEST_URI']));
@@ -47,6 +49,6 @@ $smerovac->zpracuj(array($_SERVER['REQUEST_URI']));
 // Vyrenderování šablony
 $smerovac->vypisPohled();
 
-Db::pripoj("localhost", "root", "", "mydb");
+
 
 ?>

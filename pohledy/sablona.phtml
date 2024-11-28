@@ -17,7 +17,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container d-flex align-items-center">
         <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="uvod">
             <img src="../images/logozatimanna.png" alt="Logo" width="300px" height="90px" class="d-inline-block align-top">
         </a>
 
@@ -33,34 +33,65 @@
                     <a class="nav-link active" aria-current="page" href="uvod">Úvod</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        O Kapele
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                    <a class="nav-link" href="obsazeni">Obsazení</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
+                    <a class="nav-link" href="obsazeni">Repertoár</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="obsazeni">Kalendář akcí</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="obsazeni">Fotogalerie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="obsazeni">Pro pořadatele</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
         </div>
     </div>
 </nav>
 
-<article>
+
     <?php $this->kontroler->vypisPohled(); // vložení aktuálního pohledu do šablony ?>
-</article>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: About Us -->
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>We are a company that provides great services to our customers. Our mission is to ensure satisfaction and quality.</p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="#" class="text-white">Services</a></li>
+                        <li><a href="#" class="text-white">About</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="main.js"></script>

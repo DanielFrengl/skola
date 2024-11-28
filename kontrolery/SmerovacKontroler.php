@@ -93,6 +93,8 @@ class SmerovacKontroler extends Kontroler
 
 		// Nastavení hlavní šablony
 		$this->pohled = 'sablona';
+
 	}
+
 
 }
