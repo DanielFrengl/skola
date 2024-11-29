@@ -1,0 +1,24 @@
+
+
+<h1>All Events</h1>
+
+<?php if (!empty($this->data['events'])): ?>
+    <ul>
+        <?php foreach ($this->data['events'] as $event): ?>
+            <li>
+                <strong><?= htmlspecialchars($event['title']) ?></strong>
+                <br>
+                Start: <?= htmlspecialchars($event['start_date']) ?>
+                <br>
+                End: <?= htmlspecialchars($event['end_date']) ?>
+                <br>
+                <a href="/event/update/<?= $event['id'] ?>">Edit</a> |
+                <a href="/event/delete/<?= $event['id'] ?>">Delete</a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php else: ?>
+    <p>No events found.</p>
+<?php endif; ?>
+
+<a href="/event/add">Add New Event</a>

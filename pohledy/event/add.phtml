@@ -1,0 +1,17 @@
+<h1>Add Event</h1>
+
+<form method="POST" action="/event/add">
+    <label for="title">Event Title:</label>
+    <input type="text" id="title" name="title" required>
+    <br>
+
+    <label for="start">Start Date:</label>
+    <input type="datetime-local" id="start" name="start" required>
+    <br>
+
+    <label for="end">End Date:</label>
+    <input type="datetime-local" id="end" name="end" required>
+    <br>
+
+    <button type="submit">Add Event</button>
+</form>

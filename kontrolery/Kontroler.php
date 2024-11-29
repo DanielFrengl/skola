@@ -24,6 +24,7 @@
  * Výchozí kontroler pro ITnetworkMVC
  */
 
+
 abstract class Kontroler
 {
 
