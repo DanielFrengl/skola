@@ -72,4 +72,19 @@ abstract class Kontroler
 	 */
 	abstract function zpracuj(array $parametry): void;
 
+    private function osetri(mixed $x = null): mixed
+    {
+        if (!isset($x))
+            return null;
+        elseif (is_string($x))
+            return htmlspecialchars($x, ENT_QUOTES);
+        elseif (is_array($x)) {
+            foreach($x as $k => $v) {
+                $x[$k] = $this->osetri($v);
+            }
+            return $x;
+        } else
+            return $x;
+    }
+
 }

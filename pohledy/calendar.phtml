@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <title><?= $this->hlavicka['titulek'] ?></title>
@@ -9,38 +9,78 @@
 
     <!-- FullCalendar JS -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <!-- FullCalendar Czech Locale -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js"></script>
+    <link rel="stylesheet" href="/css/calendar.css">
+
+    <!-- Styles for modal -->
+
 </head>
 <body>
-
-<h1><?= $this->hlavicka['titulek'] ?></h1>
+<div class="bodycenter">
 
 <!-- Calendar container -->
-<div id="calendar"></div>
+<div id="calendar" class="calendar"></div>
+
+<!-- Modal structure -->
+<div id="eventModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+    </div>
+</div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var calendarEl = document.getElementById('calendar');
+        var modal = document.getElementById('eventModal');
+        var closeBtn = document.querySelector('.close');
+        var modalTitle = document.getElementById('modalTitle');
+        var modalDescription = document.getElementById('modalDescription');
+
+        // Close modal when the close button is clicked
+        closeBtn.onclick = function () {
+            modal.style.display = 'none';
+        };
+
+        // Close modal when clicking outside of it
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
+            initialView: 'listYear',
+            locale: 'cs', // Set Czech locale
             headerToolbar: {
                 left: 'prev,next today',
                 center: 'title',
                 right: 'dayGridMonth,listYear'
             },
             events: '/event/getEvents', // Adjust this path if needed
+            aspectRatio: 2.5, // Adjust the aspect ratio for responsiveness
             eventClick: function(info) {
-                if (info.event.url) {
-                    window.open(info.event.url, '_blank'); // Open the URL in a new tab
-                    info.jsEvent.preventDefault(); // Prevent default navigation
-                }
+                info.jsEvent.preventDefault(); // Prevent default action
+
+                // Populate modal content
+                modalTitle.textContent = info.event.title;
+                modalDescription.textContent = info.event.extendedProps.description || "Žádné další podrobnosti nejsou k dispozici.";
+
+                // Display the modal
+                modal.style.display = 'block';
+            },
+            windowResize: function(view) {
+                // Optionally handle custom resize actions
+                console.log("Window resized!");
             }
         });
 
         calendar.render();
     });
+
 </script>
-
-
+</div>
 </body>
 </html>
